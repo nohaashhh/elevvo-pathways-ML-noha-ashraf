@@ -105,7 +105,7 @@ Covertype (UCI)
 
 5-Analyzed feature importance using XGBoost’s gain metric.
 
-###Bonus: 
+### Bonus: 
 
 Compared with Random Forest–style model in XGBoost.
 
@@ -124,6 +124,64 @@ Feature importance reveals Elevation, Horizontal Distances, and Soil Types as ke
 Elevation and proximity to water/roads dominate classification decisions.
 
 Tree-based models handle categorical one-hot features and continuous features effectively.
+
+
+## Task 4: Loan Approval Prediction
+
+### Objective
+
+Predict whether a loan application will be approved or rejected based on applicant data. The goal is to assist banks and financial institutions in automating and improving loan decision-making, 
+while minimizing risk. Key focus is on precision, recall, and F1-score due to class imbalance.
+
+### Dataset
+
+Source: Loan-Approval-Prediction-Dataset (Kaggle)
+
+### Methodology
+
+1-Data Preprocessing
+
+2-Handle missing values using mean/median for numerical features and mode for categorical features
+
+3-Encode categorical variables (one-hot encoding for multi-class, label encoding for binary)
+
+4-Combine income features: TotalIncome = ApplicantIncome + CoapplicantIncome
+
+5-Apply log transformation to skewed features (LoanAmount, TotalIncome)
+
+6-Handling Imbalanced Data
+
+7-Apply SMOTE to oversample minority class (approved/rejected loans)
+
+8-Model Selection & Training
+
+9-Logistic Regression for interpretability
+
+10-Decision Tree and Random Forest for tree-based modeling
+
+11-Train/test split (80/20)
+
+12-Model Evaluation
+
+13-Confusion matrix visualization
+
+14-Precision, Recall, and F1-score as primary metrics
+
+15-Compare model performance and choose the best classifier
+
+### Results
+
+Tree-based models slightly outperform logistic regression in all metrics, but logistic regression provides better interpretability for decision-making.
+
+### key insights
+
+Applicants with high total income and good credit history have a higher probability of loan approval
+
+Property area and education also influence approvals, with urban and graduate applicants more likely to get approved
+
+Imbalanced datasets require oversampling techniques like SMOTE to improve minority class predictions
+
+Tree-based models can capture non-linear relationships, while logistic regression offers clear decision rules for approval
 
 ## General Notes
 
