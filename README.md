@@ -39,6 +39,8 @@ Visualizations show predicted vs actual scores and residuals.
 
 -Sleep and participation are significant secondary factors.
 
+### Added in this task:
+-GUI for predicting student's score according to his attendance % , Hours studed and previous scores.
 
 
 ## Task 2: Customer Segmentation
